@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Distributeur de ticket</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.4.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.4.1/firebase-firestore.js"></script>
+    <!--
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <script defer src="main.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<h1>Distributeur de tickets pour la promo 🎫</h1>
+<h2>👽 Ici c'est comme à la poissonerie 🐠, il faut faire la queue !</h2>
+
+<form id="help-form">
+    <label for="input-name">Ton nom :</label>
+    <input id="input-name" type="text" required>
+    <button type="submit">Je veux de l'aide 👋</button>
+</form>
+
+<section>
+    <h2>Liste des apprenant.e.s</h2>
+    <button id="button-next">Au suivant 💨 !</button>
+    <button id="button-refresh">Raffraîchir la liste 🔄</button>
+    <table>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Date</th>
+            <th>Passer mon tour</th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
